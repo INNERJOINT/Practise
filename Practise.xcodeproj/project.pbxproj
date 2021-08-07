@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6812C83A26BE5FB6001368E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6812C83926BE5FB6001368E8 /* main.cpp */; };
+		6812C84D26BEA1C1001368E8 /* template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6812C84A26BE9F99001368E8 /* template.cpp */; };
+		6812C85326BEA472001368E8 /* out_of_range.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6812C85126BEA472001368E8 /* out_of_range.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,12 @@
 
 /* Begin PBXFileReference section */
 		6812C83626BE5FB6001368E8 /* Practise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Practise; sourceTree = BUILT_PRODUCTS_DIR; };
-		6812C83926BE5FB6001368E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6812C84126BE5FCF001368E8 /* Emun.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Emun.cpp; sourceTree = "<group>"; };
+		6812C84226BE5FCF001368E8 /* Emun.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Emun.hpp; sourceTree = "<group>"; };
+		6812C84A26BE9F99001368E8 /* template.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = template.cpp; sourceTree = "<group>"; };
+		6812C84B26BE9F99001368E8 /* template.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = template.hpp; sourceTree = "<group>"; };
+		6812C85126BEA472001368E8 /* out_of_range.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = out_of_range.cpp; sourceTree = "<group>"; };
+		6812C85226BEA472001368E8 /* out_of_range.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = out_of_range.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,38 @@
 		6812C83826BE5FB6001368E8 /* Practise */ = {
 			isa = PBXGroup;
 			children = (
-				6812C83926BE5FB6001368E8 /* main.cpp */,
+				6812C85026BEA3AC001368E8 /* Exception */,
+				6812C84926BE9F7B001368E8 /* Template */,
+				6812C84626BE745A001368E8 /* Emun */,
 			);
 			path = Practise;
+			sourceTree = "<group>";
+		};
+		6812C84626BE745A001368E8 /* Emun */ = {
+			isa = PBXGroup;
+			children = (
+				6812C84126BE5FCF001368E8 /* Emun.cpp */,
+				6812C84226BE5FCF001368E8 /* Emun.hpp */,
+			);
+			path = Emun;
+			sourceTree = "<group>";
+		};
+		6812C84926BE9F7B001368E8 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				6812C84A26BE9F99001368E8 /* template.cpp */,
+				6812C84B26BE9F99001368E8 /* template.hpp */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		6812C85026BEA3AC001368E8 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				6812C85126BEA472001368E8 /* out_of_range.cpp */,
+				6812C85226BEA472001368E8 /* out_of_range.hpp */,
+			);
+			path = Exception;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6812C83A26BE5FB6001368E8 /* main.cpp in Sources */,
+				6812C84D26BEA1C1001368E8 /* template.cpp in Sources */,
+				6812C85326BEA472001368E8 /* out_of_range.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
