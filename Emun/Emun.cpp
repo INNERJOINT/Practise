@@ -77,6 +77,9 @@ color_set color1, color2, color3, color4;
 
 /* 口袋中有红、黄、蓝、白、黑五种颜色的球若干个，每次从口袋中取三个不同颜色的球，统计并输出所有的取法。*/
 int main(){
+    using std::cout;
+    
+    using std::endl;
     int i, j, k, counter = 0, loop;
     for (i = RED; i <= BLACK; i++) {
         for (j = RED; j <= BLACK; j++) {
@@ -86,8 +89,8 @@ int main(){
                         counter++;
                         /* 每页显示22行 */
                         if (counter % 22 == 0) {
-                            std::cout << "请按回车键继续";
-                            std::cin.get();
+                            cout << "请按回车键继续";
+                            cin.get();
                         }
                         std::cout << std::setw(15) << counter;
                         /* 下面输出各种取法，一行为一种取法的三种颜色 */
@@ -107,27 +110,27 @@ int main(){
                             }
                             switch (color1) {
                                 case RED:
-                                    std::cout << std::setw(15) << "RED";
+                                    cout << std::setw(15) << "RED";
                                     break;
                                 case BLUE:
-                                    std::cout << std::setw(15) << "BLUE";
+                                    cout << std::setw(15) << "BLUE";
                                     break;
                                 case WHITE:
-                                    std::cout << std::setw(15) << "WHITE";
+                                    cout << std::setw(15) << "WHITE";
                                     break;
                                 case BLACK:
-                                    std::cout << std::setw(15) << "BLACK";
+                                    cout << std::setw(15) << "BLACK";
                                     break;
                                 default:
                                     break;
                             }
                         }
-                        std::cout << std::endl;
+                        cout << endl;
                     }
                 }
             }
         }
     }
-    std::cout << "共有：" << counter << "种取法" << std::endl;
+    cout << "共有：" << counter << "种取法" << endl;
     return 0;
 }
