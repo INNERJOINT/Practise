@@ -78,7 +78,7 @@ color_set color1, color2, color3, color4;
 /* 口袋中有红、黄、蓝、白、黑五种颜色的球若干个，每次从口袋中取三个不同颜色的球，统计并输出所有的取法。*/
 int main(){
     using std::cout;
-    
+    using std::cin;
     using std::endl;
     int i, j, k, counter = 0, loop;
     for (i = RED; i <= BLACK; i++) {
