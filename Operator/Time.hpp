@@ -31,12 +31,12 @@ public:
      */
     Time operator*(double n) const; //成员函数形式的重载，存在局限性 类项需为第一个操作数 调用顺序为Time * n， n * Time会报错
     friend Time operator*(double n, const Time &t);
+    void Show() const;
+    void operator<<(std::ostream &os)const;
     /*
      这是一个Time类的友元函数 而不是ostream类的友元
      需要访问哪些类的成员，就定义为哪些类的友元
      */
-    void Show() const;
-    void operator<<(std::ostream &os)const;
     friend std::ostream & operator<<(std::ostream &os, const Time &t);
 };
 
