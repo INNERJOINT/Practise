@@ -52,6 +52,9 @@ int main(int argc, const char * argv[]) {
      改进后的String类
      */
     {
+        //友元函数，将if("love"==love) => if(operator==("love", love)) => if(operator==(String("love"), love)
+        String love = "love";
+        if("love"==love) cout << "same!" << endl;
         const int ArSize = 10;
         const int MaxLen = 81;
         String name;
