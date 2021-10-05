@@ -46,6 +46,26 @@ int main(int argc, const char * argv[]) {
     using namespace std;
     
     /*
+     nullptr
+     为了解决NULL和0存在的问题
+     能够转换为其他指针
+     c++11以前 表示空指针有两种
+     1. NULL 一般编译器定义为0 也有的定义为((void*)0)
+        1. ((void*)0)存在一个问题，由于不允许void *到其他类型的隐式转换，因此NULL通常被定义为0
+     2. 0
+        1. 0 则在函数重载中存在二义性问题 void foo(char*); void foo(int); foo(NULL)会去调用foo(int)
+     */
+    if (std::is_same<decltype(NULL), decltype(0)>::value) {
+        cout << "NULL == 0" << endl;
+    }
+    if (std::is_same<decltype(NULL), decltype((void*)0)>::value) {
+        cout << "NULL == (void*)0" << endl;
+    }
+    if (std::is_same<decltype(NULL), nullptr_t>::value) {
+        cout << "NULL == nullptr" << endl;
+    }
+    
+    /*
      constexpr 编译时常量
      和内联不同，可以递归
      1. 只能有一个return语句

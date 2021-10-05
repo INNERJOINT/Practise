@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "StringBad.hpp"
+#include "String.hpp"
 
 using namespace std;
 
@@ -44,8 +45,53 @@ int main(int argc, const char * argv[]) {
         StringBad knot;
         knot = headline1;
         cout << "knot: " << knot << endl;
-        cout << "headline1: " << headline1 << endl;
+        cout << "headline1: " << headline1 << endl << endl;
+    }
+    
+    /*
+     改进后的String类
+     */
+    {
+        const int ArSize = 10;
+        const int MaxLen = 81;
+        String name;
+        cout << "Hi, what is your name?\n >>";
+        cin >> name;
         
+        cout << name << ", please enter up to " << ArSize << " short sayings <empty line to quit>:\n";
+        String sayings[ArSize];
+        char temp[MaxLen];
+        int i;
+        for (i = 0; i < ArSize; i++) {
+            cout << i + 1 << ": ";
+            cin.get(temp, MaxLen);
+            while (cin && cin.get() != '\n') {
+                continue;
+            }
+            if(!cin || temp[0] == '\0')
+                break;
+            else
+                sayings[i] = temp;
+        }
+        int total = i;
+        
+        if(total){
+            cout << "Here are your sayings:\n";
+            for (i = 0; i < total; i++) {
+                cout << sayings[i][0] << ": " << sayings[i] << endl;
+            }
+            int shortest = 0;
+            int longest = 0;
+            for (i = 1; i < total; i++) {
+                if(sayings[i].length() < sayings[shortest].length()) shortest = i;
+                if(sayings[i].length() > sayings[longest].length()) longest = i;
+            }
+            cout << "Shortest sayings:\n" << sayings[shortest] << endl;
+            cout << "Longest sayings:\n" << sayings[longest] << endl;
+            cout << "This program used " << String::HowMany() << " String objects.Bye\n";
+        }else{
+            cout << "No input!Bye.\n";
+        }
     }
     
     return 0;
