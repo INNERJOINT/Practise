@@ -18,7 +18,7 @@ private:
     long m_shares;
     double m_share_val;
     double m_total_val;
-    static int* heap;
+    int * heap;
     void set_tot(){ m_total_val = m_shares * m_share_val; }//直接定义，内联函数
 public:
     Stock();

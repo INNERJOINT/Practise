@@ -22,7 +22,7 @@ String::String(const char * s){
 
 String::String(){
     len = 0;
-    str = new char[1];//与析构函数[]匹配
+    str = new char[1];//为了与析构函数[]匹配
 }
 
 String::String(const String &);

@@ -12,11 +12,9 @@
 //    m_total_val = m_shares * m_share_val;
 //}
 
-int* Stock::heap = nullptr;
-
 Stock::Stock(){
     std::cout << "no param construct" << std::endl;
-    heap = new int;
+    heap = new int(0);
 }
 
 /*
@@ -30,6 +28,7 @@ Stock::~Stock(){
 }
 
 Stock::Stock(const std::string &co, long n , double pr ){
+    heap = nullptr;
     std::cout << "param construct" << std::endl;
     m_company = co;
     if (n < 0) {
